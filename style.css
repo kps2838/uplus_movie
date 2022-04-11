@@ -1,0 +1,263 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: #000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 400;
+}
+
+#main-header{
+    width: 1440px;
+    margin: 0 auto;
+    height: 100px;
+    padding: 0 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    display: flex;    
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+#gnb{
+    display: flex;
+}
+
+#gnb > li:not(:last-child){
+    margin-right: 50px;
+}
+
+#gnb > li{
+    text-align: center;
+}
+
+#gnb > li > a{
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    width: 95px;
+    text-align: center;
+}
+
+#gnb > li > a:hover{
+    color: #ED008C;
+}
+
+#gnb .depth2{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+
+#gnb .depth2.on{
+    height: 300px;
+    opacity: 1;
+}
+
+#gnb li:first-child .depth2{
+    left: 238px;
+}
+
+#gnb li:nth-child(2) .depth2{
+    left: 385px;
+}
+
+#gnb .depth2 > li > a{
+    color: #000;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    width: 120px;
+    height: 30px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#gnb .depth2 > li > a:hover{
+    color: #ED008C;
+}
+
+#main-header .search{
+    display: flex;
+}
+
+#main-header .search > input{
+    background: transparent;
+    border: 3px solid #666;
+    width: 270px;
+    height: 40px;
+    border-radius: 25px;
+    color: #fff;
+    padding: 10px;
+}
+
+#main-header .search .search-btn {
+    background: transparent;
+    border: none;
+    transform: translateX(-40px);
+}
+
+#main-header .search .search-btn:hover{
+    cursor: pointer;
+}
+
+#main-header .sub_menu {
+    color: #fff;
+    display: flex;
+}
+
+#main-header .sub_menu > li > a{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#main-header .sub_menu > li > span{
+    margin: 0 10px;
+}
+
+main{
+    width: 1440px;
+    margin: 0 auto;
+}
+
+
+#main-section .container{
+    display: flex;
+    width: 3163px;
+    transform: translateX(-850px);
+}
+
+#main-section .container .main-contents{
+    width: 1001px;
+    height: 550px;
+    background-image: url(./images/main01.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#main-section .container .main-contents:nth-child(2){
+    width: 1001px;
+    height: 550px;
+    background-image: url(./images/main02.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#main-section .container .main-contents:nth-child(3){
+    width: 1001px;
+    height: 550px;
+    background-image: url(./images/main03.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#main-section .container .main-contents:not(:first-child){
+    margin-left: 50px;
+}
+
+#main-section .container .main-contents:not(:last-child){
+    margin-right: 50px;
+}
+
+
+#main-section .container .main-contents .text-box{
+    background: rgba(0, 0, 0, 0.7);
+    width: 355px;
+    height: 550px;
+    position: absolute;
+    right: 0;
+    color: #fff;
+    text-align: center;
+    padding: 25px 12px;
+}
+
+#main-section .container .main-contents .text-box .eng_name{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#main-section .container .main-contents .text-box > h3{
+    font-size: 38px;
+}
+
+#main-section .container .main-contents .text-box .info{
+    display: flex;
+    font-size: 14px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+
+#main-section .container .main-contents .text-box .info > li > span{
+    color: #646464;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 10px;
+}
+
+#main-section .container .main-contents .text-box .warning{
+    color: #FF0000;
+}
+
+#main-section .main-contents .text-box .director{
+    font-size: 14px;
+    display: flex;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+#main-section .main-contents .text-box .director > p:first-child{
+    margin-right: 10px;
+}
+
+#main-section .main-contents .text-box .actor{
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+#main-section .main-contents .text-box .story{
+    font-size: 16px;
+    text-align: left;
+}
+
+section > h3{
+    color: #fff;
+}
+
+#new{
+    margin-top: 60px;
+}
+
+#new span{
+    color: #FFC700;
+}
+
+section .slide .container .movie-list{
+    display: flex;
+}
+
+section .slide .container .movie-list li:not(:nth-child(5n)){
+    margin-right: 30px;
+}
